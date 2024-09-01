@@ -3,10 +3,10 @@ import React from "react";
 import {type} from "node:os";
 
 type turnCheck = {
-    turn: boolean
+    on: boolean
 }
 type ButtonPropsType ={
-    onoff: boolean;
+    on: boolean;
 }
 type ColorPropsType ={
     color: string
@@ -14,7 +14,7 @@ type ColorPropsType ={
 export function OnOff(props: turnCheck) {
     return (
         <div>
-            <Button onoff={props.turn}/>
+            <Button on={props.on}/>
 
 
         </div>
@@ -31,7 +31,7 @@ const Lighter = styled.div<ColorPropsType>`
 
 export function Button(props: ButtonPropsType) {
 
-    if (props.onoff) {
+    if (props.on) {
         return <ButtonWrapper>
             <ButtonColor color={'green'}><b>On</b></ButtonColor>
             <button>Off</button>
