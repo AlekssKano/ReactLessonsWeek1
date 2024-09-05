@@ -9,8 +9,8 @@ console.log("UncontrolledAccordion rendering");
 
     let [collapsed, setCollapsed] = React.useState(false);
        return( <div>
-            <AccordionTitle title={props.title}/><button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>
-
+            <AccordionTitle title={props.title} onClick={()=>setCollapsed(!collapsed)}/>
+               {/*<button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>*/}
            { !collapsed  && <AccordionBody value={props.value}/>}
         </div>
 
@@ -20,10 +20,11 @@ console.log("UncontrolledAccordion rendering");
 
 type AccordionTitleProps = {
     title: string;
+    onClick: ()=>void
 }
 export function AccordionTitle(props:AccordionTitleProps){
     return(
-            <h3>{props.title}</h3>
+            <h3 onClick={()=>{props.onClick()}}>{props.title}</h3>
     );
 }
 
