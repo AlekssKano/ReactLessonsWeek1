@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Accordion1} from "./components/Accordion";
-import {Rating, RatingValueType} from "./Rating/Rating";
-import {OnOff} from "./components/OnOff/OnOff";
-import {OnOff2} from "./components/OnOff/OnOff2";
-import {UncontrolledAccordion} from "./components/UncontrolledAccordion";
+import {Accordion1} from "./components/accordion_Controlled/Accordion";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
+import {OnOff_Uncontrolled} from "./components/uncontrolled_OnOff/OnOff_Uncontrolled";
+import {OnOff_Controlled} from "./components/OnOff/OnOff_Controlled";
+import {UncontrolledAccordion} from "./components/accordion_Uncontrolled/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/uncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff2} from "./components/uncontrolled_OnOff/uncontrolledOnOff2";
 
@@ -34,7 +34,7 @@ function App() {
             {/*<UncontrolledAccordion title={"Users"} value = {3}/>*/}
             {/*<UncontrolledRating />*/}
             <Rating value={ratingValue} onClick={setRating}/>
-            {/*<OnOff2 on={switchOn} onChange={(on)=>{setswitchOn(on)}}/>*/}
+            {/*<OnOff_Controlled on={switchOn} onChange={(on)=>{setswitchOn(on)}}/>*/}
             <UncontrolledOnOff2 onChange={setswitchOn}/> {switchOn.toString()}
 
         </div>

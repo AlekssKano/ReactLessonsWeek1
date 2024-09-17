@@ -11,7 +11,7 @@ type ButtonPropsType ={
 type ColorPropsType ={
     color: string
 }
-export function OnOff(props: turnCheck) {
+export function OnOff_Uncontrolled(props: turnCheck) {
     return (
         <div>
             <Button on={props.on}/>

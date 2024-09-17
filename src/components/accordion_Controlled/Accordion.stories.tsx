@@ -1,7 +1,6 @@
 // Replace your-framework with the name of your framework
 import {Meta, StoryObj} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
-
 import { Accordion1 } from './Accordion';
 import React from "react";
 
@@ -16,18 +15,18 @@ const meta: Meta<typeof Accordion1> = {
 };
 
 export default meta;
-// type Story = StoryObj<typeof Accordion1>
-//
-// export const FirstStory: Story ={
-// args:{
-//     title: "Hello",
-//     collapsed:true,
-//     onChange:()=>{}
-// }
-// } пока не  usать
+type Story = StoryObj<typeof Accordion1>
+
+export const FirstStory: Story ={
+args:{
+    title: "Hello",
+    collapsed:true,
+
+}
+}
 
 
-const onChangeHandler = action('onChange');
+const onChangeHandler= action('OnChange')
 
 export const CollapsedAccordion = () => {
     return <div><Accordion1 title={"Collapsed Accordion"}

@@ -4,7 +4,7 @@ type PropsType={
     on: boolean
     onChange:(value: boolean)=>void
 }
-export  function OnOff2(props: PropsType){
+export  function OnOff_Controlled(props: PropsType){
 console.log("onoff rendering")
     console.log('on:', props.on)
     const onStyle={
