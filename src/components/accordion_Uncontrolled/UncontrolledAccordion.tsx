@@ -1,30 +1,44 @@
 import React from "react";
+import {reducer} from "./reducer";
+
 type AccordionProps = {
     title: string;
     value: number;
 
 }
-export function UncontrolledAccordion(props:AccordionProps){
-console.log("UncontrolledAccordion rendering");
 
-    let [collapsed, setCollapsed] = React.useState(false);
-       return( <div>
-            <AccordionTitle title={props.title} onClick={()=>setCollapsed(!collapsed)}/>
-               {/*<button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>*/}
-           { !collapsed  && <AccordionBody value={props.value}/>}
+const TOGGLE_CONSTANT = 'TOGGLE-COLLAPSED'
+
+
+export function UncontrolledAccordion(props: AccordionProps) {
+    console.log("UncontrolledAccordion rendering");
+
+    // let [collapsed, setCollapsed] = React.useState(false);
+
+    let [state, dispatch] = React.useReducer(reducer, {collapsed:false});
+    return (<div>
+            {/*<AccordionTitle title={props.title} onClick={()=>setCollapsed(!collapsed)}/>*/}
+            <AccordionTitle title={props.title} onClick={() => {
+                dispatch({type: TOGGLE_CONSTANT})
+            }}/>
+            {/*<button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>*/}
+            {!state.collapsed && <AccordionBody value={props.value}/>}
         </div>
 
 
-       )
+    )
 }
 
 type AccordionTitleProps = {
     title: string;
-    onClick: ()=>void
+    onClick: () => void
 }
-export function AccordionTitle(props:AccordionTitleProps){
-    return(
-            <h3 onClick={()=>{props.onClick()}}>{props.title}</h3>
+
+export function AccordionTitle(props: AccordionTitleProps) {
+    return (
+        <h3 onClick={() => {
+            props.onClick()
+        }}>{props.title}</h3>
     );
 }
 
@@ -32,17 +46,17 @@ type AccordionBodyProps = {
     value: number;
 }
 
-export function AccordionBody(props:AccordionBodyProps){
+export function AccordionBody(props: AccordionBodyProps) {
     console.log("AccordionBody rendering");
-   if (props.value === 1) return(
-            <ul>
-                <li>1</li>
+    if (props.value === 1) return (
+        <ul>
+            <li>1</li>
 
-            </ul>
+        </ul>
 
 
     )
-    if (props.value === 2) return(
+    if (props.value === 2) return (
         <ul>
             <li>1</li>
             <li>2</li>
@@ -50,7 +64,7 @@ export function AccordionBody(props:AccordionBodyProps){
 
 
     )
-    if (props.value === 3) return(
+    if (props.value === 3) return (
         <ul>
             <li>1</li>
             <li>2</li>
@@ -59,7 +73,7 @@ export function AccordionBody(props:AccordionBodyProps){
 
 
     )
-    if (props.value ===  4) return(
+    if (props.value === 4) return (
         <ul>
             <li>1</li>
             <li>2</li>
@@ -69,7 +83,7 @@ export function AccordionBody(props:AccordionBodyProps){
 
 
     )
-    if (props.value === 5) return(
+    if (props.value === 5) return (
         <ul>
             <li>1</li>
             <li>2</li>

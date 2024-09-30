@@ -28,7 +28,9 @@ function App() {
             {/*<PageTitle  title={"ToraDora"}/>*/}
             <Accordion1 title={"How do you assess it?"}
                         value={5} collapsed={accordionCollapsed}
-                        onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
+                        onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}
+            items={[ {title:'Aloha',value: 2}]}
+            onClick={()=>alert('Lol')}/>
 
             {/*<UncontrolledAccordion title={"Menu"} value = {3} />*/}
             {/*<UncontrolledAccordion title={"Users"} value = {3}/>*/}
