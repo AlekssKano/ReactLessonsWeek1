@@ -7,6 +7,7 @@ import {OnOff_Controlled} from "./components/OnOff/OnOff_Controlled";
 import {UncontrolledAccordion} from "./components/accordion_Uncontrolled/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/uncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff2} from "./components/uncontrolled_OnOff/uncontrolledOnOff2";
+import {SimpleExample} from "./stories/useEffect2";
 
 
 function hello() {
@@ -26,18 +27,19 @@ function App() {
             {/*<UncontrolledRating value={3}/>*/}
             {/*<Accordion title={"How much marks?"} value={3}/>*/}
             {/*<PageTitle  title={"ToraDora"}/>*/}
-            <Accordion1 title={"How do you assess it?"}
-                        value={5} collapsed={accordionCollapsed}
-                        onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}
-            items={[ {title:'Aloha',value: 2}]}
-            onClick={()=>alert('Lol')}/>
+            {/*<Accordion1 title={"How do you assess it?"}*/}
+            {/*            value={5} collapsed={accordionCollapsed}*/}
+            {/*            onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}*/}
+            {/*items={[ {title:'Aloha',value: 2}]}*/}
+            {/*onClick={()=>alert('Lol')}/>*/}
 
             {/*<UncontrolledAccordion title={"Menu"} value = {3} />*/}
             {/*<UncontrolledAccordion title={"Users"} value = {3}/>*/}
             {/*<UncontrolledRating />*/}
-            <Rating value={ratingValue} onClick={setRating}/>
+            {/*<Rating value={ratingValue} onClick={setRating}/>*/}
             {/*<OnOff_Controlled on={switchOn} onChange={(on)=>{setswitchOn(on)}}/>*/}
-            <UncontrolledOnOff2 onChange={setswitchOn}/> {switchOn.toString()}
+            {/*<UncontrolledOnOff2 onChange={setswitchOn}/> {switchOn.toString()}*/}
+            <SimpleExample/>
 
         </div>
     );

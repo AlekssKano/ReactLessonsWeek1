@@ -1,37 +1,26 @@
-import {memo, useState} from "react";
+import {memo, useMemo, useState} from "react";
 
-export default {}
+export default {
+    title:'UseState demo'
+}
 
-const NewMessagesCounter = (props: any) => {
-    return <div>{props.count}</div>
+function generateData(){
+    console.log('generateData')
+    return 1
 }
-export type usersType = {
-     users: Array<string>
-}
-const UsersSecret = (props: usersType) => {
-    console.log("SecretUsers Working")
-    return <div>{props.users.map((u, i) => <div key={i}>{u}</div>)
-    }
-    </div>
-
-}
-const Users = memo(UsersSecret)
 export const Example1 = () => {
-    const [counter, setCount] = useState(0)
-    const [users, setUsers] = useState(['Dora', 'Lola', "Carol"])
+    console.log("Example1")
 
-    const addUser = () => {
-        const newUsers = [...users, 'Sveta' + new Date().getTime()]
-        setUsers(newUsers)
+    const InitialValue=useMemo(generateData, [])
+    const [counter, setCount] = useState(generateData)
 
-    }
+    const changer =(state:number)=>state+1
+
     return <>
         <button onClick={() => {
-            setCount(counter + 1)
+            setCount(changer)
         }}>+
         </button>
-        <button onClick={addUser}>add users</button>
-        <NewMessagesCounter count={counter}/>
-        <Users users={users}/>
+        {counter}
     </>
 }

@@ -1,5 +1,5 @@
 import React, {memo, useMemo, useState} from 'react';
-import {usersType} from "./ReactMemo.stories";
+// import {usersType} from "./ReactMemo.stories";
 import {Select} from "../components/select/Select";
 
 export default {

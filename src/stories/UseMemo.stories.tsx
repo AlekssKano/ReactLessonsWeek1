@@ -1,5 +1,6 @@
 import React, {memo, useCallback, useMemo, useState} from 'react';
-import {usersType} from "./ReactMemo.stories";
+import {usersType} from "./UseState.stories";
+// import {usersType} from "./ReactMemo.stories";
 
 export default {
     title: 'UseMemo'
