@@ -68,16 +68,24 @@ const[minute,setMinute]=useState<number>(date.getMinutes());
 const[hour,setHour]=useState<number>(date.getHours());
     console.log('SetTiomeoutExample')
     useEffect(() => {
-        setInterval(()=>{
+            const IntervalId= setInterval(()=>{
             console.log("setSecondInterval")
             setSeconds((state)=>state+1)},1000)
-        setInterval(()=>{
+            const IntervalId2=setInterval(()=>{
             console.log("setMinuteInterval")
             setMinute((state)=>state+1)},60000)
-        setInterval(()=>{
-            console.log("setHourInterval")
+            const IntervalId3= setInterval(()=>{
+                console.log("setHourInterval")
             setHour((state)=>state+1)},3600000)
-    }, []);
+
+            return ()=>{
+                clearInterval(IntervalId)
+                clearInterval(IntervalId2)
+                clearInterval(IntervalId3)
+            }
+    },
+
+        []);
 
 if(second==60){
     setSeconds(0)
@@ -103,9 +111,10 @@ export const SetClock2=()=>{
     const[hour,setHour]=useState<number>(date.getHours());
     console.log('SetTiomeoutExample')
     useEffect(() => {
-        setInterval(()=>{
-            console.log("setSecondInterval")
+ setInterval(()=>{
+            //console.log("setSecondInterval")
             setSeconds((state)=>state+1)},1000)
+
     }, []);
 
     if(second==60){

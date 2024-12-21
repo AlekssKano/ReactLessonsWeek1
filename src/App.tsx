@@ -8,6 +8,8 @@ import {UncontrolledAccordion} from "./components/accordion_Uncontrolled/Uncontr
 import {UncontrolledRating} from "./components/uncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff2} from "./components/uncontrolled_OnOff/uncontrolledOnOff2";
 import {SimpleExample} from "./stories/useEffect2";
+import {WallClock} from "./components/clock/WallClock";
+import {Clock} from "./components/clock/clock";
 
 
 function hello() {
@@ -39,8 +41,9 @@ function App() {
             {/*<Rating value={ratingValue} onClick={setRating}/>*/}
             {/*<OnOff_Controlled on={switchOn} onChange={(on)=>{setswitchOn(on)}}/>*/}
             {/*<UncontrolledOnOff2 onChange={setswitchOn}/> {switchOn.toString()}*/}
-            <SimpleExample/>
-
+            {/*<SimpleExample/>*/}
+<WallClock/>
+            <Clock/>
         </div>
     );
 }
