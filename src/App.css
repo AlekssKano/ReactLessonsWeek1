@@ -26,10 +26,13 @@ body {
   height: 4px;
   background-color: #000;
   top: 50%;
-  left: 23%;
+  left: 18%;
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: transform 0.05s ease-out;
+
+
+
 }
 
 .hour { height: 6px; }
@@ -40,10 +43,11 @@ body {
   width: 20px;
   height: 20px;
   text-align: center;
-  top: 45%; /* Центрирование относительно родителя */
+  top: 45%;
   left: 43%;
   transform-origin: center;
   font-size: 16px; /* Размер шрифта */
   font-weight: bold; /* Жирный текст */
   color: #000; /* Цвет текста */
+
 }

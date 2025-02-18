@@ -42,8 +42,8 @@ function App() {
             {/*<OnOff_Controlled on={switchOn} onChange={(on)=>{setswitchOn(on)}}/>*/}
             {/*<UncontrolledOnOff2 onChange={setswitchOn}/> {switchOn.toString()}*/}
             {/*<SimpleExample/>*/}
-<WallClock/>
-            <Clock/>
+{/*<WallClock/>*/}
+{/*            <Clock/>*/}
         </div>
     );
 }

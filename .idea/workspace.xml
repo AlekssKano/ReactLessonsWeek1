@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04737e0c-e021-417f-9435-bce0fea56a4a" name="Changes" comment="commit" />
+    <list default="true" id="04737e0c-e021-417f-9435-bce0fea56a4a" name="Changes" comment="commit +clock">
+      <change afterPath="$PROJECT_DIR$/src/components/clock/AnalogClockView.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/clock/analogClockView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/clock/digitalClockView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/clock/Clock.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/clock/Clock.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/clock/clock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/clock/clock.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,6 +83,8 @@
       <recent name="C:\Users\aleks\Desktop\React course\temp\my-app\src\components\OnOff" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\aleks\Desktop\React course\temp\my-app\src\components\clock\analogClockView.tsx" />
+      <recent name="C:\Users\aleks\Desktop\React course\temp\my-app\src\components\clock\digitalClockView.tsx" />
       <recent name="C:\Users\aleks\Desktop\React course\temp\my-app\src\components\accordion_Uncontrolled\reducer.tsx" />
       <recent name="C:\Users\aleks\Desktop\React course\temp\my-app\src\Rating\Rating.tsx" />
     </key>
@@ -123,6 +134,9 @@
       <workItem from="1732425761173" duration="3268000" />
       <workItem from="1733730144871" duration="6895000" />
       <workItem from="1733739297731" duration="634000" />
+      <workItem from="1734737214154" duration="6784000" />
+      <workItem from="1735179639624" duration="41000" />
+      <workItem from="1739863225964" duration="5033000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -204,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733742188876</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="commit +clock">
+      <option name="closed" value="true" />
+      <created>1734753035641</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734753035641</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +246,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize project using Create React App" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commit +clock" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit +clock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
